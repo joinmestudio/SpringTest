@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+	<bean name="engine1" class="auto_wiringbyName.Engine" p:serial="12775" p:power="10"/>
+	<bean name="engine" class="auto_wiringbyName.Engine" p:serial="125" p:power="10"/>
+	
+	<bean name="car" class="auto_wiringbyName.Car" autowire="byName" />
+		
+	
+	
+	
+	
+</beans>
