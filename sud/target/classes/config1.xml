@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean name="engine" class="test1.sud.Engine">
+		<property name="power">
+			<value> 10</value>
+		</property>
+	</bean>
+	<bean name="engine1" class="test1.sud.Engine">
+		<property name="power" value="11" />
+	</bean>
+	<bean name="engine2" class="test1.sud.Engine" p:power="12" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<bean name="colllist1" class="test1.sud.Coll">
+		<property name="list">
+			<list>
+				<value>sud</value>
+				<value>han</value>
+				<value>shu</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="colllist2" class="test1.sud.Coll">
+		<property name="list">
+			<value>sud</value>	
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<bean name="collset1" class="test1.sud.Coll">
+		<property name="set">
+			<set>
+				<value>12</value>
+				<value>22</value>
+				<value>12</value>
+				<value>44</value>
+			</set>
+		</property>
+	</bean>
+	
+	<bean name="collset2" class="test1.sud.Coll">
+		<property name="set">
+			<value>12</value>
+		</property>
+	</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<bean name="collmap1" class="test1.sud.Coll">
+		<property name="map">
+			<map>
+				<entry key="100">
+					<value>sud</value>
+				</entry>
+				<entry key="133" value="moke"/>
+			</map>
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<bean name="collprop1" class="test1.sud.Coll">
+		<property name="properties">
+			<props>
+				<prop key="100">sud</prop>
+				<prop key="34100">dfs</prop>
+				
+			</props>
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<bean name="engine3" class="test1.sud.Engine" p:power="1.1"/>
+	<bean name="car3" class="test1.sud.Car" >
+		<property name="model" value="betal"/>
+		<property name="engine">
+			<ref bean="engine3"/>
+		</property>
+	</bean>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<bean name="engine4" class="test1.sud.Engine" p:power="2.1"/>
+	<bean name="car4" class="test1.sud.Car" p:model="cityz" p:engine-ref="engine4"/>
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+	<bean name="engine5" class="test1.sud.Engine" p:power="2.71" init-method="start" destroy-method="stop"/>
+
+
+
+
+
+
+
+</beans>
